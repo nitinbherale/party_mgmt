@@ -116,17 +116,17 @@
                         <div class="col-12">
                             <ul class="social-links list-unstyled">
                                 <li>
-                                    <a title="facebook" href="<?php echo $member_list[0]['mem_fb_lk']; ?>" style="color: #007bff;">
+                                    <a title="facebook" href="<?php echo $member_list[0]['mem_fb_lk']; ?>" style="">
                                     <i class="zmdi zmdi-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a title="twitter" href="<?php echo $member_list[0]['mem_tw_lk']; ?>" style="color: #007bff;">
+                                    <a title="twitter" href="<?php echo $member_list[0]['mem_tw_lk']; ?>" style="">
                                     <i class="zmdi zmdi-twitter"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a title="instagram" href="javascript:void(0);" style="color: #007bff;">
+                                    <a title="instagram" href="javascript:void(0);" style="">
                                     <i class="zmdi zmdi-instagram"></i>
                                     </a>
                                 </li>
@@ -184,11 +184,11 @@
                     </div>
                     <div class="body">
                         <ul class="list-group">
-                            <li class="list-group-item"><span class="badge badge-primary">Email Id :</span> <?php echo $member_list[0]['mem_email']; ?></li>
-                            <li class="list-group-item"><span class="badge badge-success">DOB</span>: <?php echo $member_list[0]['mem_dob']; ?></li>
-                            <li class="list-group-item"><span class="badge badge-danger">District</span> : <?php echo $member_list[0]['mem_dis']; ?></li>
-                            <li class="list-group-item"><span class="badge badge-danger">Tahsil</span> :<?php echo $member_list[0]['mem_tah']; ?></li>
-                            <li class="list-group-item"><span class="badge badge-danger">Street</span> : <?php echo $member_list[0]['mem_str']; ?></li>                      
+                            <li class="list-group-item"><span class=""><strong>Email Id :</strong></span>&nbsp;&nbsp; <?php echo $member_list[0]['mem_email']; ?></li>
+                            <li class="list-group-item"><span class=""><strong>DOB</strong></span>:&nbsp;&nbsp; <?php echo $member_list[0]['mem_dob']; ?></li>
+                            <li class="list-group-item"><span class=""><strong>District</strong></span> : <?php echo $member_list[0]['mem_dis']; ?></li>
+                            <li class="list-group-item"><span class=""><strong>Tahsil</strong></span> :&nbsp;&nbsp; <?php echo $member_list[0]['mem_tah']; ?></li>
+                            <li class="list-group-item"><span class=""><strong>Street</strong></span> : &nbsp;&nbsp; <?php echo $member_list[0]['mem_str']; ?></li>                      
                         </ul>
                     </div>
                 </div>
@@ -201,4 +201,5 @@
     .card_mt_20{margin-top: 50px;margin-bottom: 60px;}
     .card_mt_20 p {color: #ffffff;}
     .tab_custom_clr h5{color: #f37437;}
+    .social-links li a{color: #f37437;}
 </style>

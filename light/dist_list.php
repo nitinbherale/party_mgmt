@@ -1,6 +1,18 @@
 <?php include("header.php");
 list($dist) = exc_qry("select * from tbl_dist where status = 1");
+
+if (isset($_POST['dist_del'])) {
+    $id =  $dist[0]['dist_id'];
+    $query = "UPDATE tbl_dist SET status = 0 WHERE dist_id = '$id' ";
+    $fire_query = mysqli_query($dblink,$query);
+    if ($fire_query) {
+        echo '<script>success_msg("Success","District Deleed Successfully","index.php");</script>';
+    }
+     
+}
+
  ?>
+ 
 <section class="content">
     <div class="container">
         <div class="row clearfix">
@@ -51,8 +63,13 @@ list($dist) = exc_qry("select * from tbl_dist where status = 1");
                                         </td>
                                         <td class="project-actions">
                                             <!-- <a href="#" class="btn btn-neutral btn-sm"><i class="zmdi zmdi-eye"></i></a> -->
-                                            <button class="btn btn-neutral btn-sm"><i class="zmdi zmdi-edit"></i></button>
-                                            <form method="post">
+
+                                            <form method="POST" action="edit_dist.php">
+                                               <input type="hidden" name="dist_id" value="<?php echo $dist[$i]['dist_id'] ?>">
+                                            <button class="btn btn-neutral btn-sm" type="submit"><i class="zmdi zmdi-edit"></i></button>
+                                             </form>
+
+                                            <form method="POST">
                                                 <input type="hidden" name="dist_id" value="<?php echo $dist[$i]['dist_id'] ?>">
                                                 <button name="dist_del" type="submit" class="btn btn-neutral btn-sm"><i class="zmdi zmdi-delete"></i></button>
                                             </form>
