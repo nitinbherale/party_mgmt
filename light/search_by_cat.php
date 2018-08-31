@@ -2,8 +2,10 @@
 <!--Multiselect Css-->
 <link rel="stylesheet" href="../assets/plugins/multi-select/css/multi-select.css">
 <link rel="stylesheet" href="../assets/plugins/bootstrap-select/css/bootstrap-select.css" />
+<link rel="stylesheet" href="../assets/plugins/bootstrap-select/css/bootstrap-select.css" />
 
- <section class="content">
+
+<section class="content">
 <div class="container">
         <div class="row clearfix">
             <div class="col-lg-12">
@@ -34,26 +36,32 @@
                         <h2><strong>Edit</strong> District</h2>                        
                     </div>
                     <div class="body">
+                        <div class="form-group">
                          <label for="dist">Distict</label>
                          <select class="form-control z-index show-tick" data-live-search="true">
                             <option>Thane</option>
                             <option>Ahmednagar</option>
                             <option>Akola</option>
                          </select>
+                        </div>
 
+                        <div class="form-group">
                          <label for="Tal">Tal</label>
                          <select class="form-control z-index show-tick" data-live-search="true">
                             <option>Kalyan</option>
                             <option>Ambernath</option>
                             <option>Badlapur</option>
                          </select>  
-
+                        </div>
+                        
+                        <div class="form-group">
                          <label for="Tal">Category</label>
                          <select class="form-control z-index show-tick" data-live-search="true">
                             <option>MLA</option>
                             <option>Sadasya</option>
                             <option>Khasdaar</option>
                          </select>
+                        </div>
 
                         	<button type="submit" name="edit_dist" class="btn btn-default btn-round waves-effect">Edit </button>
                         </form>

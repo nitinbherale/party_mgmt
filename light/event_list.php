@@ -31,28 +31,28 @@
                 $per_email = $event[0]['evnt_cor_email'];  
 
                 /*approve_mail($evnt_title,$date,$desciption,$street,$city,$postal_code,$time,$per_nm,$per_phone,$per_email,$evnt_id);*/     
-            $headers = "MIME-Version: 1.0" . "\r\n";
-            $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-            $email =  "nitinbherale@gmail.com";           
+               $headers = "MIME-Version: 1.0" . "\r\n";
+               $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+               $email =  "nitinbherale@gmail.com";           
             // Additional headers
-            $headers .= 'From: contact@yuvasena.co.in' . "\r\n";
-            $subject = 'AUT Saheb program details on - '.$date;
-            $message1 = "<html><body>";
-            $message1 .= "<div class='mail-content'>";
-            $message1 .= "<table style='border:1px solid #ccc;width: 90%;margin: 0px auto; padding: 28px;background-color:#f7f7f7;'>";
-            $message1 .= "<tr><td align='center'><img src = 'yuvasena.co.in/new_ss_program/admin/images/logo_shivsena.png' style='width:20%;'></td> </tr>";
-            $message1 .= "<tr style='padding-bottom:20px;'> <td style='font-family: verdana;line-height: 35px;font-size: 15px;'>Dear ".$dear_name." Saheb,<td></tr>";
-            $message1 .= "<tr style='padding-bottom:20px;'> <td style='font-family: verdana;line-height: 31px;font-size: 15px;'>Jai Maharashtra!!! <br/> We have received invitation for the following program :<td></tr>";
-            $message1 .= "<tr><td style='font-family: verdana;line-height: 31px;font-size: 15px;'><b>Date : </b>".$date."</td></tr>";
-            $message1 .= "<tr><td style='font-family: verdana;line-height: 31px;font-size: 15px;'><b>Details : </b>".$description."</td></tr>";
-            $message1 .= "<tr><td style='font-family: verdana;line-height: 31px;font-size: 15px;'><b>Location : </b>".$street.", ".$city.", ".$postal_code."</td></tr>";
-            $message1 .= "<tr><td style='line-height: 31px;font-size: 15px;font-family: verdana;'><b>Time : </b>".$time." </td></tr>";
-            $message1 .= "<tr><td style='font-family: verdana;line-height: 31px;font-size: 15px;'><b>Person of Contact : </b>".$per_nm." - ".$per_phone." </td></tr>";
-            $message1 .= "<tr><td style='font-family: verdana;line-height: 31px;font-size: 15px;'><b>Status : </b> Tentative confirm</td></tr>";
-            $message1 .= "<tr><td style='font-family: verdana;line-height: 26px;font-size: 15px; padding-top: 5px;'>Regards, <br/><b>ShivSena Digital Media Team</b></td></tr>";
-            $message1 .= "</table>";
-            $message1 .= "</div>";
-            $message1 .= "</body></html>";
+               $headers .= 'From: contact@yuvasena.co.in' . "\r\n";
+               $subject = 'AUT Saheb program details on - '.$date;
+               $message1 = "<html><body>";
+               $message1 .= "<div class='mail-content'>";
+               $message1 .= "<table style='border:1px solid #ccc;width: 90%;margin: 0px auto; padding: 28px;background-color:#f7f7f7;'>";
+               $message1 .= "<tr><td align='center'><img src = 'yuvasena.co.in/new_ss_program/admin/images/logo_shivsena.png' style='width:20%;'></td> </tr>";
+               $message1 .= "<tr style='padding-bottom:20px;'> <td style='font-family: verdana;line-height: 35px;font-size: 15px;'>Dear ".$dear_name." Saheb,<td></tr>";
+               $message1 .= "<tr style='padding-bottom:20px;'> <td style='font-family: verdana;line-height: 31px;font-size: 15px;'>Jai Maharashtra!!! <br/> We have received invitation for the following program :<td></tr>";
+               $message1 .= "<tr><td style='font-family: verdana;line-height: 31px;font-size: 15px;'><b>Date : </b>".$date."</td></tr>";
+               $message1 .= "<tr><td style='font-family: verdana;line-height: 31px;font-size: 15px;'><b>Details : </b>".$description."</td></tr>";
+               $message1 .= "<tr><td style='font-family: verdana;line-height: 31px;font-size: 15px;'><b>Location : </b>".$street.", ".$city.", ".$postal_code."</td></tr>";
+               $message1 .= "<tr><td style='line-height: 31px;font-size: 15px;font-family: verdana;'><b>Time : </b>".$time." </td></tr>";
+               $message1 .= "<tr><td style='font-family: verdana;line-height: 31px;font-size: 15px;'><b>Person of Contact : </b>".$per_nm." - ".$per_phone." </td></tr>";
+               $message1 .= "<tr><td style='font-family: verdana;line-height: 31px;font-size: 15px;'><b>Status : </b> Tentative confirm</td></tr>";
+               $message1 .= "<tr><td style='font-family: verdana;line-height: 26px;font-size: 15px; padding-top: 5px;'>Regards, <br/><b>ShivSena Digital Media Team</b></td></tr>";
+               $message1 .= "</table>";
+               $message1 .= "</div>";
+               $message1 .= "</body></html>";
 
         $text = $message1;
 
@@ -159,10 +159,7 @@
                                                
                                         <?php } ?>
                                         </td>
-                                       <!--  <td>Yuvasainik</td> -->
-                                       <!--  <td><span class="badge badge-success bg-success text-white">Active</span></td> -->
                                         <td>
-                                            <!--<a href="view_event.php?evnt_no=<?php echo $events[$i]['evnt_id']; ?>" class="btn btn-sm btn-default waves-effect waves-float waves-green"><i class="zmdi zmdi-eye"></i></a>-->
                                              <form method="get" action="view_event.php">
                                                  <input type="hidden" name="view_id" value="<?php echo $events[$i]['evnt_id'];?>">
                                                  <button type="submit" class="btn btn-sm btn-default waves-effect waves-float waves-green left_btn"><i class="zmdi zmdi-eye"></i></button>
@@ -170,12 +167,11 @@
 
                                             <form method="POST" action="edit_event.php">
                                              <input type="hidden" class="" name="del_id" value="<?php echo $events[$i]['evnt_id'];?>">
-                                            <!--<a href="javascript:void(0);" class="btn btn-sm btn-default waves-effect waves-float waves-green"><i class="zmdi zmdi-edit"></i></a>-->
+    
                                             <button type="submit" name="edit_member" class="btn btn-sm btn-default waves-effect waves-float waves-green left_btn"><i class="zmdi zmdi-edit"></i></button>
                                             </form>
                                             <form method="POST">
                                                 <input type="hidden" name="id" value="<?php echo $events[$i]['evnt_id']; ?>">
-                                            <!--<a href="javascript:void(0);" class="btn btn-sm btn-default waves-effect waves-float waves-red"><i class="zmdi zmdi-delete"></i></a>-->
                                              <button type="submit" name="delete_evnt" class="btn btn-sm btn-default waves-effect waves-float waves-red"><i class="zmdi zmdi-delete"></i></button>
                                             </form>
                                         </td>

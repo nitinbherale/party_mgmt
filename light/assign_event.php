@@ -1,4 +1,7 @@
 <?php include("header.php") ?>
+<link rel="stylesheet" href="../assets/plugins/multi-select/css/multi-select.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap-select/css/bootstrap-select.css" />
+
 
 <section class="content">
     <div class="container">
@@ -27,67 +30,37 @@
         <div class="row clearfix">
             <div class="col-lg-12">
                   <div class="card">
-                        <div class="card-header" style="background: #FF4500;color: #fff;font-weight: 800;text-align:center;">
-                            <strong class="card-title">Manage Event</strong>
-                        </div>
-                        <div class="card-body">
-                          <!-- Credit Card -->
-                          <div id="pay-invoice">
-                              <div class="card-body">
-                                                           
-                                  <form enctype="multipart/form-data" method="post">
-                                     
-                                  <table class="table table-striped">
-                                      <tbody>
-                                        <tr scope="row">
-                                          <th class=""><strong>Event Name :</strong></th>
-                                          <td class="">test</td>
-                                        </tr>
-                                        <tr>
-                                          <th scope="row" style="overflow: hidden;"><strong>Event Description :</strong> </th>
-                                          <td>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</td>
-                                        
-                                        </tr>
-                                        <tr>
-                                          <th scope="row"><strong>Event Date :</strong> </th>
-                                          <td>2018-08-30 (04:05 am)</td>
-                                        </tr>
-                                         <tr>
-                                          <th scope="row"><strong>Event Location :</strong> </th>
-                                          <td>At-Apti,Post_vaholi, Mumbai, 421301</td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                    <input type="hidden" name="homepage" value="program">
-                                      <input type="hidden" name="p_id" value="126">
-                                        <div class="form-group p-10">
-                                          <label for="cc-payment" class="control-label mb-1">User</label>
-                                          <select id="cc-pament" name="user" class="form-control user-success" onchange="update(this.value)">
-                                            <option value="">Select User</option>
-                                            <option value="3">Nitin S. Bherale </option>  
-                                        </select>
-                                      </div>
-                                      <div id="data" style="margin: 5px;"><h4> Send Notification To </h4><br><div class="row"><div class="form-group col-sm-3"> 
-                                         <input type="checkbox" name="checkarr[]" value="3"> <strong>User 1 </strong>
-                                       </div>
-                                        <div class="form-group col-sm-3"> 
-                                            <input type="checkbox" name="checkarr[]" value="9"> <strong>User 2 </strong>
-                                        </div>
-                                        <div class="form-group col-sm-3"> 
-                                            <input type="checkbox" name="checkarr[]" value="10"> <strong>User 3 </strong>
-                                        </div>
-                                    </div>
-                                  </div></div>
+                    <div class="header">
+                        <h2> <strong>Manage</strong> Event </h2>
+                        <ul class="header-dropdown">
+                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                            </li>
+                            <li class="remove">
+                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <div class="list-group"> <a href="javascript:void(0);" class="list-group-item active"> Event Details</a> 
+                        <p class="list-group-item float-left"><span><strong>Event Name </strong></span>  : <span class="float-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></p>
+                        <p class="list-group-item float-left"><span><strong>Event Description </strong></span>  : <span class="float-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></p>
+                        <p class="list-group-item float-left"><span><strong>Event Date </strong></span>  : <span class="float-right"> 24th September 2018</span></p>
+                         <p class="list-group-item float-left"><span><strong>Event Location </strong></span>  : <span class="float-right"> At-Apti,Post_vaholi, Mumbai, 421301</span></p>
+                        <p class="list-group-item float-left"><span><strong>Select User </strong></span>
+                        <select class="form-control z-index show-tick" data-live-search="true">
+                          <option>User 1</option>
+                          <option>User 2</option>
+                          <option>User 3</option>
+                        </select>
 
-                                         <!--<button type="submit" name="assign" class="btn btn-secondary">Asign Program</button>-->
-                                         <button type="submit" name="assign" class="btn btn-success btn-anim m_left" style="background: #FF4500;"><i class="fa fa-sign-out"></i><span class="btn-text">Assign Program</span></button>
-                                  </form>
-                              </div>
-                          </div>
+                          <button type="submit" name="add_dist" class="btn btn-default btn-round waves-effect">Assign Event </button>
+                        </p>
 
+                       
 
-                    </div> <!-- .card -->
-                                    
+                      </div>
+                    </div>
+                </div><!--card-->
                 
                 </div>
 
@@ -95,3 +68,10 @@
         </div><!--col-lg-12-->
     </div>
 </section>
+
+<script src="../assets/plugins/multi-select/js/jquery.multi-select.js"></script> <!-- Multi Select Plugin Js --> 
+
+<style type="text/css">
+  .list-group .active{background-color: #f37437;border-color: #f37437;}
+  .list-group strong{color: #f37437;}
+</style>
